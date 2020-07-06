@@ -3,12 +3,12 @@ import { Route, Switch } from 'react-router-dom';
 
 import './Pages.scss';
 
-import ContactPage from './Pages/ContactPage';
-import NewsPage from './Pages/NewsPage';
-import AboutPage from './Pages/AboutPage';
-import TopPage from './Pages/TopPage';
-import PageNotFoundPage from './Pages/PageNotFoundPage';
-import NewsDetail from './NewsDetail';
+import ContactPage from './ContactPage';
+import NewsPage from './NewsPage';
+import AboutPage from './AboutPage';
+import TopPage from './TopPage';
+import PageNotFoundPage from './PageNotFoundPage';
+import NewsDetail from './../components/NewsDetail';
 
 const Pages = () => {
   return (

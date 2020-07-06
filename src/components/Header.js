@@ -17,7 +17,7 @@ const Header = () => {
                 <Route path="/news" exact>
                     News
                 </Route>
-                <Route path="/news/:title">
+                <Route path="/news/:title"> 
                     News
                 </Route>
                 <Route path="/" exact>

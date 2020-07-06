@@ -4,7 +4,7 @@ import './App.scss';
 
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import Pages from './components/Pages';
+import Pages from './pages/Pages';
 
 function App() {
     return (
