@@ -1,36 +1,36 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import './Pages.scss';
+import './Content.scss';
 
-import ContactPage from './ContactPage';
-import NewsPage from './NewsPage';
-import AboutPage from './AboutPage';
-import TopPage from './TopPage';
-import PageNotFoundPage from './PageNotFoundPage';
+import ContactContent from './../components/ContactContent';
+import NewsContent from './../components/NewsContent';
+import AboutContent from './../components/AboutContent';
+import TopContent from './../components/TopContent';
+import PageNotFoundContent from './../components/PageNotFoundContent';
 import NewsDetail from './../components/NewsDetail';
 
-const Pages = () => {
+const Content = () => {
   return (
-    <div className="pages">
+    <div className="content">
         <Switch>
             <Route path="/contact">
-                <ContactPage />
+                <ContactContent />
             </Route>
             <Route path="/about">
-                <AboutPage />
+                <AboutContent />
             </Route>
             <Route path="/news" exact>
-                <NewsPage />
+                <NewsContent />
             </Route>
             <Route path="/news/:title">
               <NewsDetail />
             </Route>
             <Route path="/" exact>
-                <TopPage />
+                <TopContent />
             </Route>
             <Route path="*">
-                <PageNotFoundPage />
+                <PageNotFoundContent />
                 {/*<Redirect path="/" />*/}
             </Route>
         </Switch>
@@ -38,4 +38,4 @@ const Pages = () => {
   )
 }
 
-export default Pages;
+export default Content;

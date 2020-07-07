@@ -1,8 +1,6 @@
 import React from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 
-import './Button.scss';
-
 const NewsDetail = () => {
   const { title } = useParams();
   const history = useHistory();

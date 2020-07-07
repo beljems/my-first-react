@@ -4,7 +4,7 @@ import './App.scss';
 
 import Header from './components/Header';
 import Sidebar from './components/Sidebar';
-import Pages from './pages/Pages';
+import Content from './components/Content';
 
 function App() {
     return (
@@ -12,7 +12,7 @@ function App() {
           <Header />
           <div className="app-content">
             <Sidebar />
-            <Pages />
+            <Content />
           </div>
       </BrowserRouter>
     );
