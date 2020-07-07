@@ -7,7 +7,7 @@ import './Header.scss';
 const Header = () => {
     const [categories, setCategories] = useState([]);
 
-    useEffect(async () => {
+    useEffect(() => {
         async function getCategories() {
             let res = await axios({
                 method: 'GET',

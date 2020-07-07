@@ -6,7 +6,7 @@ const CategoryContent = () => {
     const { category } = useParams();
     const [joke, setJoke] = useState('');
 
-    useEffect(async () => {
+    useEffect(() => {
 
         async function getContent() {
 
