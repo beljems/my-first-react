@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Route, Switch } from 'react-router-dom';
 
-
 import './Header.scss';
 
 const Header = () => {
@@ -20,7 +19,6 @@ const Header = () => {
 
         getJoke();
     }, [])
-
 
     return (
         <header className="header">
