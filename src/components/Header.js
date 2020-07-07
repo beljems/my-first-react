@@ -9,12 +9,16 @@ const Header = () => {
     const [joke, setJoke] = useState('');
 
     useEffect(async () => {
-        let res = await axios({
-            method: 'GET',
-            url: 'https://api.chucknorris.io/jokes/random'
-        })
+        async function getJoke() {
+            let res = await axios({
+                method: 'GET',
+                url: 'https://api.chucknorris.io/jokes/random'
+            })
 
-        setJoke(res.data.value);
+            setJoke(res.data.value);
+        }
+
+        getJoke();
     }, [])
 
 
