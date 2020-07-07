@@ -46,7 +46,7 @@ const Header = () => {
                     </Route>
                     <Route path="*">
                         404
-                        {/*<Redirect path="/" />*/}
+                        {/*<Redirect to="/" />*/}
                     </Route>
                 </Switch>
             </h1>

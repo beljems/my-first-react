@@ -35,7 +35,7 @@ const Content = () => {
                 </Route>
                 <Route path="*">
                     <PageNotFoundContent />
-                    {/*<Redirect path="/" />*/}
+                    {/*<Redirect to="/" />*/}
                 </Route>
             </Switch>
         </div>
