@@ -36,10 +36,10 @@ const Sidebar = () => {
                 <li>
                     <Link to="/news">News</Link>
                     <ul>
-                        {categories.map((cat) => (
-                            <li key={cat}>
-                                <Link to="">
-                                    {cat}
+                        {categories.map((category) => (
+                            <li key={category}>
+                                <Link to={`/jokes/${category}`}>
+                                    {category}
                                 </Link>
                             </li>
                         ))}

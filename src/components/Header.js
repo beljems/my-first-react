@@ -5,20 +5,20 @@ import { Route, Switch } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
-    const [joke, setJoke] = useState('');
+    const [categories, setCategories] = useState([]);
 
     useEffect(async () => {
-        async function getJoke() {
+        async function getCategories() {
             let res = await axios({
                 method: 'GET',
-                url: 'https://api.chucknorris.io/jokes/random'
+                url: 'https://api.chucknorris.io/jokes/categories'
             })
 
-            setJoke(res.data.value);
+            setCategories(res.data);
         }
 
-        getJoke();
-    }, [])
+        getCategories();
+    }, []);
 
     return (
         <header className="header">
@@ -30,10 +30,15 @@ const Header = () => {
                     <Route path="/about">
                         About
                     </Route>
-                    <Route path="/news" exact>
+                    <Route path="/news/:title">
                         News
                     </Route>
-                    <Route path="/news/:title">
+                    {categories.map((category) => (
+                        <Route key={category} path={`/jokes/${category}`}>
+                            {category}
+                        </Route>
+                    ))}
+                    <Route path="/news">
                         News
                     </Route>
                     <Route path="/" exact>
@@ -43,8 +48,7 @@ const Header = () => {
                         404
                         {/*<Redirect path="/" />*/}
                     </Route>
-                </Switch><br />
-                {joke}
+                </Switch>
             </h1>
         </header>
     )
