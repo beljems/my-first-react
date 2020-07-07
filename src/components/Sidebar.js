@@ -37,7 +37,7 @@ const Sidebar = () => {
                     <Link to="/news">News</Link>
                     <ul>
                         {categories.map((cat) => (
-                            <li>
+                            <li key={cat}>
                                 <Link to="">
                                     {cat}
                                 </Link>
