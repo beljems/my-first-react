@@ -43,9 +43,7 @@ const Sidebar = () => {
                                 </Link>
                             </li>
                         ))}
-                    </ul>
 
-                    <ul>
                         <li>
                             <Link to="/news/news-1">News 1</Link>
                         </li>
