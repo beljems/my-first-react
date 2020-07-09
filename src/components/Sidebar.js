@@ -1,12 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import './Sidebar.scss';
 import { ReactComponent as Logo } from './../logo.svg';
 
-const Sidebar = () => {
-    const [categories, setCategories] = useState([]);
+import { getCategories } from '../redux/modules/category';
+
+const Sidebar = (props) => {
+    /*const [categories, setCategories] = useState([]);
 
     useEffect(async () => {
         async function getCategories() {
@@ -19,7 +22,15 @@ const Sidebar = () => {
         }
 
         getCategories();
-    }, []);
+    }, []);*/
+
+
+    const dispatch = useDispatch();
+    const categories = useSelector(state => state.category.categories);
+
+    useEffect(() => {
+        dispatch(getCategories());
+    }, [dispatch]);
 
     return (
         <aside className="sidebar">
